@@ -27,11 +27,11 @@ namespace ConTestWeb.Controllers
             connection.Open();
             try
             {
-                SqlCommand query = new SqlCommand("select username from users", connection);
+                SqlCommand query = new SqlCommand("select EMAIL_ from ACT_ID_USER", connection);
                 SqlDataReader reader = query.ExecuteReader();
                 while (reader.Read())
                 {
-                    ret.Add(reader["username"].ToString());
+                    ret.Add(reader["EMAIL_"].ToString());
                 }
             }
             catch(SqlException e)
